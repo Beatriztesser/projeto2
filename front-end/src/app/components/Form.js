@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { insertMaskinCpf } from "../functions/cpf";
 import { insertMaskIPhone } from "../functions/phone";
-import { useForm } from 'react-hook-form';  // Importe o useForm corretamente
+import { useForm } from 'react-hook-form';  
 import { checkCep } from "../functions/endereco";
 
 const FormContainer = styled.form`
@@ -123,8 +123,12 @@ const Form = ({ addUser }) => {
       !bairro ||
       !numero
     ) {
+      
       return toast.warn("Preencha todos os campos!");
+      
     }
+
+
 
     try {
       const response = await axios.post("http://localhost:8800/", {
