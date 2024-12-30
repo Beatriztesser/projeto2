@@ -25,6 +25,7 @@ const InputArea = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px 0;
+  font-size: 1.2vw;
 `;
 
 const Input = styled.input`
